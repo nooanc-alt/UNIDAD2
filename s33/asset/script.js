@@ -23,7 +23,31 @@ console.log(queryMainTitle);
 let queryMainText = document.querySelectorAll(".main-text");
 console.log(queryMainText);
 
-document.getElementById("maid-buttom").addEventListener("click", function() {
-    console.log("click en el boton")
-}
- ) 
+document.getElementById("main-button").addEventListener("click", function() {
+    console.log("click en el boton");
+
+    // Podemos cambiar estilos //
+    let mainButton = document.getElementById("main-button");
+    let currentBackgroundColor = document.body.style.backgroundColor;
+
+    if (currentBackgroundColor == "blue") {
+      document.body.style.backgroundColor = "black";
+      mainButton.style.color = "black";
+    } else {
+      document.body.style.backgroundColor = "blue";
+      mainButton.style.color = "blue";
+    }
+
+    let magicNumber = document.querySelector("#magic-number").value;
+
+    console.log(`Valor ingresado en el input: ${magicNumber}`);
+
+    let greetParagraph = document.querySelector("#greet");
+
+    // Validacion //
+    if (magicNumber == "" || magicNumber.length === 0) {
+      greetParagraph.innerText = "NO INGRESASTE UN NOMBRE";
+    } else {
+      greetParagraph.innerText = `Buenas noches ${magicNumber}`;
+    }
+});
