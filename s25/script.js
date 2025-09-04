@@ -70,6 +70,15 @@ console.log(datoNumber !== datoString); // true
 let backticks = `string entre  backticks ocomillas invertidas`;
 console.log(backticks);
 
-let nombreCompleto = 'Noemi Alca';
+nombreCompleto = "Noemi Alca";
 let edad = 18;
-let saludo = 'Hola, me llamo' ${nombreCompleto}! Tengo ${edad} años,`;
+let saludo = `Hola, me llamo ${nombreCompleto}! Tengo ${edad} años,`;
+
+let tieneDNI = true;
+let esMayorDeEdad = edad >= 18;
+// EJEMPLO DE OPERADORES LÓGICOS //
+console.log("¿Puede votar?");
+console.log(tieneDNI && esMayorDeEdad); // true si cumple ambas condiciones
+
+console.log("¿Puede acceder al cine para mayores?");
+console.log(esMayorDeEdad || tieneDNI); // basta con que cumpla una
