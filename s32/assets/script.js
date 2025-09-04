@@ -43,7 +43,8 @@ class Chef extends Person {
 
   // Polimorfismo → sobrescribir el método "introduce"
   introduce() {
-    console.log(`Soy el chef ${this.firstname}, trabajo en ${this.restaurant} y mi comida favorita es ${this.favoriteFood}.`);
+    console.log(`Soy el chef ${this.firstname}, trabajo en ${this.restaurant} 
+      y mi comida favorita es ${this.favoriteFood}.`);
   }
 }
 

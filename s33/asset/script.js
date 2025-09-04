@@ -27,16 +27,21 @@ document.getElementById("main-button").addEventListener("click", function() {
     console.log("click en el boton");
 
     // Podemos cambiar estilos //
-    let mainButton = document.getElementById("main-button");
-    let currentBackgroundColor = document.body.style.backgroundColor;
 
-    if (currentBackgroundColor == "blue") {
-      document.body.style.backgroundColor = "black";
-      mainButton.style.color = "black";
-    } else {
-      document.body.style.backgroundColor = "blue";
-      mainButton.style.color = "blue";
-    }
+    
+let mainButton = document.getElementById("main-button");
+
+mainButton.addEventListener("click", () => {
+  let currentBackgroundColor = document.body.style.backgroundColor;
+
+  if (currentBackgroundColor === "blue") {
+    document.body.style.backgroundColor = "black";
+    mainButton.style.color = "white"; 
+  } else {
+    document.body.style.backgroundColor = "blue";
+    mainButton.style.color = "yellow"; 
+  }
+});
 
     let magicNumber = document.querySelector("#magic-number").value;
 
@@ -51,3 +56,4 @@ document.getElementById("main-button").addEventListener("click", function() {
       greetParagraph.innerText = `Buenas noches ${magicNumber}`;
     }
 });
+

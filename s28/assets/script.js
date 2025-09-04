@@ -26,16 +26,6 @@ function showNumbers() {
   console.log(10);
 }
 
-
-
-
-
-
-
-
-
-
-
 function addTwoNumbers(x, y) {
   console.log(`Primer parámetro: ${x}`);
   console.log(`Segundo parámetro: ${y}`);
@@ -73,6 +63,7 @@ console.log("ARROW FUNCTIONS")
 
 let value1 = 12;
 let value2 = 2;
+
 
 let multiplyTwoNumbers = (a, b) => {
   console.log(`Factor 1 -> ${a}`);
