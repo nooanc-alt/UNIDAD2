@@ -1,0 +1,81 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.campo {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Estado cuando el campo tiene el foco */
+input:focus,
+textarea:focus {
+  border-color: #0077cc;
+  outline: none;
+  background-color: #f0f8ff;
+}
+
+/* Campos inválidos */
+input:invalid,
+textarea:invalid {
+  border-color: #e63946;
+  background-color: #ffe5e5;
+}
+
+/* Campos válidos */
+input:valid,
+textarea:valid {
+  border-color: #2a9d8f;
+  background-color: #e8fdf5;
+}
+
+/* Botón */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #0077cc;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #005fa3;
+}

@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+:root {
+  --primary-color: #4b2e1e;
+  --secondary-color: #dcc5a1;
+  --background-light: #f6f1e7;
+  --highlight-warm: #b57a4b;
+  --text-base: #2b1b12;
+  --border-radius: 8px;
+  --input-border: #cdb8a6;
+  --input-focus: #8b5e3c;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: "Lato", Arial, sans-serif;
+  background-color: var(--secondary-color);
+  margin: 0;
+  color: #5a4632;
+}
+
+main {
+  display: block;
+  padding: 24px 16px 32px;
+}
+
+.page-header {
+  max-width: 960px;
+  margin: 0 auto 10px;
+  text-align: center;
+}
+.page-header h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+  font-family: "Playfair Display", serif;
+  color: var(--text-base);
+}
+.page-header p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.form-section {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.complaint-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  width: 640px;
+  max-width: 95vw;
+}
+
+fieldset {
+  border: 2px solid var(--input-border);
+  margin-bottom: 16px;
+  padding: 16px;
+  border-radius: var(--border-radius);
+}
+legend {
+  font-weight: bold;
+  color: var(--input-focus);
+  padding: 0 6px;
+}
+
+label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 0.95em;
+}
+.input-text,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid var(--input-border);
+  border-radius: var(--border-radius);
+  font-size: 0.95em;
+  outline: none;
+  color: #3d2c1e;
+  background: #fff;
+  font-family: inherit;
+}
+.input-text:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--input-focus);
+  box-shadow: 0 0 0 3px rgba(139, 94, 60, 0.15);
+}
+textarea {
+  resize: vertical;
+}
+
+.form-text {
+  display: block;
+  font-size: 0.85em;
+  color: #7c5a3a;
+  margin-top: 2px;
+}
+
+button[type="submit"] {
+  background-color: var(--input-focus);
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1em;
+  width: 100%;
+  transition: background 0.2s;
+}
+button[type="submit"]:hover {
+  background-color: #6d482e;
+}
+
+@media only screen and (min-width: 800px) {
+  .page-header h1 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .page-header h1 {
+    font-size: 40px;
+  }
+}

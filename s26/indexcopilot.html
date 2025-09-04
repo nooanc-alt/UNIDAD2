@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libro de Reclamaciones</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <!-- Rutas relativas y nombres en kebab-case -->
+    <link rel="stylesheet" href="./assets/css/duplicado.css" />
+    <link rel="stylesheet" href="./assets/css/libro.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/stylecopilot.css" />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="main-header p-2 m-0 border-0">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <div class="logo-container">
+            <img
+              src="./assets/img/logo2.png"
+              class="logo-img"
+              alt="Logo Café Aroma"
+            />
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#main-navbar"
+            aria-controls="main-navbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="main-navbar">
+            <div class="navbar-nav">
+              <a
+                class="nav-link active nav-btn"
+                aria-current="page"
+                href="./index.html"
+                >Inicio</a
+              >
+              <a class="nav-link nav-btn" href="./about.html">About</a>
+              <a class="nav-link nav-btn" href="./menu.html">Menu</a>
+              <a class="nav-link nav-btn" href="./contact.html">Contact</a>
+              <a class="nav-link nav-btn" href="./complaints-book.html"
+                >Complaints Book</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="top-bar">
+        <form class="search-form" role="search" aria-label="Buscar">
+          <input
+            type="text"
+            placeholder="Buscar..."
+            id="search-bar"
+            name="search"
+            aria-label="Buscar"
+          />
+          <button type="submit" aria-label="Buscar">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+        <div class="cart-container">
+          <button type="button" aria-label="Ver carrito">
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Page Title & Description -->
+      <section class="page-header">
+        <h1>Libro de Reclamaciones</h1>
+        <p>
+          Queremos mejorar tu experiencia en <strong>Café Aroma</strong>. Por
+          favor, completa el siguiente formulario.
+        </p>
+      </section>
+
+      <!-- Complaint Form -->
+      <section class="form-section">
+        <form class="complaint-form" autocomplete="off" novalidate>
+          <fieldset>
+            <legend>Datos del consumidor</legend>
+            <label for="full-name"
+              >Nombre completo:
+              <input
+                class="input-text"
+                type="text"
+                id="full-name"
+                name="full-name"
+                required
+                autocomplete="name"
+              />
+            </label>
+            <label for="dni"
+              >DNI:
+              <input
+                class="input-text"
+                type="text"
+                id="dni"
+                name="dni"
+                maxlength="8"
+                pattern="\d{8}"
+                required
+                autocomplete="off"
+                inputmode="numeric"
+                aria-describedby="dni-help"
+              />
+              <span id="dni-help" class="form-text">8 dígitos numéricos</span>
+            </label>
+            <label for="phone"
+              >Teléfono:
+              <input
+                class="input-text"
+                type="tel"
+                id="phone"
+                name="phone"
+                autocomplete="tel"
+                inputmode="tel"
+              />
+            </label>
+            <label for="email"
+              >Correo electrónico:
+              <input
+                class="input-text"
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+              />
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Detalle de la queja o reclamo</legend>
+            <label for="type"
+              >Tipo:
+              <select id="type" name="type" required>
+                <option value="">Seleccione</option>
+                <option value="complaint">Queja</option>
+                <option value="claim">Reclamo</option>
+              </select>
+            </label>
+            <label for="description"
+              >Descripción:
+              <textarea
+                id="description"
+                name="description"
+                rows="4"
+                required
+                aria-describedby="desc-help"
+              ></textarea>
+              <span id="desc-help" class="form-text"
+                >Describe brevemente el motivo de tu queja o reclamo.</span
+              >
+            </label>
+            <label for="order-ref"
+              >Pedido relacionado:
+              <input
+                class="input-text"
+                type="text"
+                id="order-ref"
+                name="order-ref"
+              />
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Acción solicitada</legend>
+            <label for="action"
+              >Indique lo que espera:
+              <textarea
+                id="action"
+                name="action"
+                rows="3"
+                required
+                aria-describedby="action-help"
+              ></textarea>
+              <span id="action-help" class="form-text"
+                >¿Qué solución esperas?</span
+              >
+            </label>
+          </fieldset>
+
+          <button type="submit" class="btn btn-primary">Enviar reclamo</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container pt-3">
+        <div class="footer-content row justify-content-center">
+          <div class="footer-section col-12 col-md-6 col-lg-4">
+            <h5><strong>Café Aroma</strong></h5>
+            <p>
+              Ven y descubre sabores únicos que harán de cada visita un momento
+              especial.
+            </p>
+          </div>
+          <div class="footer-section col-12 col-md-6 col-lg-4">
+            <h5><strong>Enlaces</strong></h5>
+            <ul class="footer-links list-unstyled">
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section col-12 col-lg-4">
+            <h5><strong>Contáctanos</strong></h5>
+            <p>
+              <a href="mailto:contacto@cafearoma.com">contacto@cafearoma.com</a>
+            </p>
+            <p><a href="tel:+51987654321">(+51) 987 654 321</a></p>
+          </div>
+          <div class="footer-bottom text-center">
+            <p>&copy; 2025 Café Aroma. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
