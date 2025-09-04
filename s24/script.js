@@ -24,3 +24,16 @@ console.log(typeof(serie))
 // UNA LINEA //
 /*  COMENTARIO MULTILINEA
 ES IGUAL COMENT CSSS*/
+// MAS EJEMPLOS //
+let ciudad = "Lima";
+let altura = 1900; // metros
+let esEstudiante = false;
+
+console.log(ciudad);
+console.log(altura);
+console.log(esEstudiante);
+
+let cancion = "I wonder";
+let duracion = 4.3; // minutos
+console.log(cancion);
+console.log(typeof(cancion));
