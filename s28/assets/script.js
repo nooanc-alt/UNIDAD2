@@ -44,3 +44,10 @@ let name = 'Noemi';
 let greetMessage = greet(name) ;
 console.log(greetMessage);
 console.log(greet(name));
+
+function despedida (nombre) {
+    let mensaje = `Adiós ${nombre}, que te vaya bien.`;
+    return mensaje;
+}
+console.log(despedida('Noemi'));
+console.log(despedida());
