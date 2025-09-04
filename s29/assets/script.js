@@ -18,3 +18,24 @@ while (iterator <= 75) {
     console.log(iterator);
     iterator += 5;
 }
+
+console.log("Iterar un arreglo")
+
+let words = ["chau", "gato", "cafe", "", "abrazo", "brocoli"];
+console.log(words);
+
+for (let i = 0; i < words.length; i++) {
+    console.log(i);
+    console.log(words[i]);
+}
+
+console.log("INVERTIR ARREGLO")
+let auxWords = [];
+
+for (let i = words.length - 1; i >= 0; i--) {
+  // console.log(words[i])
+  auxWords.push(words[i]);
+};
+
+console.log(auxWords);
+
