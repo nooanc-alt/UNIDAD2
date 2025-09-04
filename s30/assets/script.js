@@ -20,9 +20,18 @@ if (num3 > num4) {
 
 RETO
 // Crea un programa que pida un numero entero al usuario e
-indique si este numero es par o no
+// indique si este numero es par o no
 let num = parseInt(prompt("Ingresa un numero"));
 if (num % 2 === 0) {
-console. log( ${num} es par. );
+    console.log(`${num} es par.`);
 } else {
-console. log( ${num} es impar. );
+    console.log(`${num} es impar.`); 
+}
+// condicional mayor de edad //
+let edad = parseInt(prompt("Ingresa tu edad"));
+
+if (edad >= 18) {
+    console.log("Eres mayor de edad.");
+} else {
+    console.log("Eres menor de edad.");
+}
